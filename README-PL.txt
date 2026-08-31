@@ -1,4 +1,4 @@
-LOKALNA KOPIA howtoascend.pl
+LOKALNA KOPIA DROPSHIPPINGHOWTOASCEND.COM
 
 Windows:
 1. Rozpakuj całe archiwum ZIP.
