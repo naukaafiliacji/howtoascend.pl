@@ -257,5 +257,54 @@
 	<!-- Start of bodyEnd -->
     
     <!-- End of bodyEnd -->
-</body>
+<script id="dhta-approach-nav-fix">
+(function(){
+  function normalizeHref(href){
+    try { return new URL(href, document.baseURI).pathname.replace(/\/+$/,''); }
+    catch(e){ return href || ''; }
+  }
+  function addApproachToNav(nav){
+    if(!nav) return;
+    var links=Array.from(nav.querySelectorAll('a[href]'));
+    var already=links.some(function(a){ return /\/approach\.html$/i.test(normalizeHref(a.getAttribute('href'))); });
+    if(already) return;
+    var blog=links.find(function(a){ return /\/blog\.html$/i.test(normalizeHref(a.getAttribute('href'))); });
+    if(!blog) return;
+    var item=blog.parentElement;
+    if(!item) return;
+    var clone=item.cloneNode(true);
+    clone.setAttribute('data-dhta-approach-item','true');
+    var a=clone.querySelector('a[href]');
+    if(!a) return;
+    a.setAttribute('href','approach.html');
+    a.setAttribute('data-framer-name','nav link');
+    a.removeAttribute('data-framer-page-link-current');
+    a.removeAttribute('aria-current');
+    var text=a.querySelector('p') || a.querySelector('[data-framer-component-type="RichTextContainer"]') || a;
+    if(text.tagName && text.tagName.toLowerCase()==='p') text.textContent='Approach';
+    else {
+      var p=a.querySelector('p');
+      if(p) p.textContent='Approach';
+      else a.textContent='Approach';
+    }
+    item.parentNode.insertBefore(clone,item);
+  }
+  function ensureApproach(){
+    document.querySelectorAll('[data-framer-name="Nav Wrapper"] nav[data-framer-name="nav links"]').forEach(addApproachToNav);
+  }
+  var queued=false;
+  function queueEnsure(){
+    if(queued) return;
+    queued=true;
+    requestAnimationFrame(function(){ queued=false; ensureApproach(); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',ensureApproach,{once:true});
+  else ensureApproach();
+  window.addEventListener('load',ensureApproach,{once:true});
+  setTimeout(ensureApproach,0);
+  setTimeout(ensureApproach,250);
+  setTimeout(ensureApproach,1000);
+  new MutationObserver(queueEnsure).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script></body>
 </html>
