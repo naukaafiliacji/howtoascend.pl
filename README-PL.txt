@@ -54,3 +54,6 @@ Logowanie:
 
 CNAME dla GitHub Pages pozostaje w katalogu głównym i zawiera:
 howtoascend.pl
+
+
+Wersja hero V4: strona glowna odwzorowana z zatwierdzonego mockupu; grafika jest zbudowana z prawdziwych elementow HTML/CSS, nie jako screenshot.
