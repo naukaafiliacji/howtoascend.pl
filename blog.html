@@ -10,41 +10,31 @@
   <link href="assets/css/style.css" rel="stylesheet"/>
  </head>
  <body>
-  <header class="site-header">
-   <div class="container nav">
-    <a aria-label="Dropshipping How To Ascend home" class="brand" href="index.html">
-     <span aria-hidden="true" class="brand-mark">
-     </span>
-     <span>
-      Dropshipping How To Ascend
-     </span>
-    </a>
-    <nav aria-label="Main navigation" class="nav-links">
-     <a href="index.html#services">
-      Services
-     </a>
-     <a href="index.html#process">
-      Process
-     </a>
-     <a href="approach.html">
-      Approach
-     </a>
-     <a class="active" href="blog.html">
-      Blog
-     </a>
-     <a href="contact.html">
-      Contact
-     </a>
-     <a class="button" href="contact.html">
-      Get Started
-     </a>
+  <header class="site-header dual-header">
+  <div class="container dual-nav">
+    <div class="mode-switch" aria-label="Wybierz obszar strony">
+      <a class="mode-switch__link is-active" href="index.html?mode=dropshipping">Dropshipping</a>
+      <a class="mode-switch__link" href="index.html?mode=support">Obsługa klienta</a>
+    </div>
+    <nav class="dual-nav-links" aria-label="Główna nawigacja">
+      <a href="index.html#uslugi">Usługi</a>
+      <a href="index.html#jak-dzialamy">Jak działamy</a>
+      <a href="approach.html">O nas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
     </nav>
-    <button aria-expanded="false" aria-label="Open menu" class="menu-toggle">
-     <span>
-     </span>
-    </button>
-   </div>
-  </header>
+    <a class="login-button" href="login.html">Logowanie</a>
+    <button class="dual-menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu"><span></span><span></span></button>
+  </div>
+  <div class="dual-mobile-menu" aria-hidden="true"><div class="container">
+    <a href="index.html#uslugi">Usługi</a>
+    <a href="index.html#jak-dzialamy">Jak działamy</a>
+    <a href="approach.html">O nas</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Kontakt</a>
+    <a class="login-button" href="login.html">Logowanie</a>
+  </div></div>
+</header>
   <main>
    <section class="page-hero">
     <div class="container reveal">
