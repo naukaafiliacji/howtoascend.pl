@@ -13,26 +13,26 @@
   <header class="site-header dual-header">
   <div class="container dual-nav">
     <div class="mode-switch" aria-label="Wybierz obszar strony">
-      <a class="mode-switch__link is-active" href="index.html?mode=dropshipping">Dropshipping</a>
-      <a class="mode-switch__link" href="index.html?mode=support">Obsługa klienta</a>
+      <a class="mode-switch__link is-active" href="?mode=dropshipping">Dropshipping</a>
+      <a class="mode-switch__link" href="?mode=support">Obsługa klienta</a>
     </div>
     <nav class="dual-nav-links" aria-label="Główna nawigacja">
-      <a href="index.html#uslugi">Usługi</a>
-      <a href="index.html#jak-dzialamy">Jak działamy</a>
-      <a href="approach.html">O nas</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Kontakt</a>
+      <a href="#uslugi">Usługi</a>
+      <a href="#jak-dzialamy">Jak działamy</a>
+      <a href="approach/">O nas</a>
+      <a href="blog/">Blog</a>
+      <a href="contact/">Kontakt</a>
     </nav>
-    <a class="login-button" href="login.html">Logowanie</a>
+    <a class="login-button" href="login/">Logowanie</a>
     <button class="dual-menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu"><span></span><span></span></button>
   </div>
   <div class="dual-mobile-menu" aria-hidden="true"><div class="container">
-    <a href="index.html#uslugi">Usługi</a>
-    <a href="index.html#jak-dzialamy">Jak działamy</a>
-    <a href="approach.html">O nas</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Kontakt</a>
-    <a class="login-button" href="login.html">Logowanie</a>
+    <a href="#uslugi">Usługi</a>
+    <a href="#jak-dzialamy">Jak działamy</a>
+    <a href="approach/">O nas</a>
+    <a href="blog/">Blog</a>
+    <a href="contact/">Kontakt</a>
+    <a class="login-button" href="login/">Logowanie</a>
   </div></div>
 </header>
   <main>
@@ -48,7 +48,7 @@
       The page you are looking for does not exist or has been moved.
      </p>
      <div class="page-actions">
-      <a class="button" href="index.html">
+      <a class="button" href="">
        Back home
       </a>
      </div>
@@ -58,7 +58,7 @@
   <footer class="site-footer">
    <div class="container">
     <div class="footer-top">
-     <a class="brand" href="index.html">
+     <a class="brand" href="">
       <span aria-hidden="true" class="brand-mark">
       </span>
       <span>
@@ -66,19 +66,19 @@
       </span>
      </a>
      <div class="footer-links">
-      <a href="index.html#services">
+      <a href="#uslugi">
        Services
       </a>
-      <a href="contact.html">
+      <a href="contact/">
        Contact
       </a>
-      <a href="data-deletion.html">
+      <a href="data-deletion/">
        Data Deletion
       </a>
-      <a href="privacy.html">
+      <a href="privacy/">
        Privacy
       </a>
-      <a href="terms.html">
+      <a href="terms/">
        Terms
       </a>
      </div>
@@ -95,5 +95,24 @@
   </footer>
   <script src="assets/js/main.js">
   </script>
- </body>
+ 
+<script data-pretty-url-cleaner>
+(function(){
+  var path = window.location.pathname;
+  if (!path) return;
+  var target = null;
+  if (path.endsWith('/index.html')) {
+    target = path.slice(0, -10) || '/';
+  } else if (path.endsWith('.html') && path !== '/404.html') {
+    target = path.slice(0, -5) + '/';
+  }
+  if (target && target !== path) {
+    var qs = window.location.search || '';
+    var hash = window.location.hash || '';
+    window.history.replaceState({}, '', target + qs + hash);
+  }
+})();
+</script>
+
+</body>
 </html>

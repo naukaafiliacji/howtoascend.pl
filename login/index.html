@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Logowanie — Dropshipping How To Ascend</title>
+  <meta name="description" content="Logowanie do panelu Dropshipping How To Ascend."/>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+</head>
+<body class="dual-page">
+<header class="site-header dual-header">
+  <div class="container dual-nav" style="grid-template-columns:1fr auto">
+    <a href="../" style="font-weight:800;color:#111827">Dropshipping How To Ascend</a>
+    <a class="login-button" href="../">Powrót na stronę</a>
+  </div>
+</header>
+<main class="login-shell">
+  <section class="login-card">
+    <p class="dual-kicker">Panel klienta</p>
+    <h1>Logowanie</h1>
+    <p>Warstwa wizualna panelu jest przygotowana. Podłączenie właściwego systemu autoryzacji wymaga backendu.</p>
+    <form onsubmit="return false;">
+      <div class="field"><label for="email">E-mail</label><input id="email" type="email" autocomplete="email" placeholder="twoj@email.pl"/></div>
+      <div class="field"><label for="password">Hasło</label><input id="password" type="password" autocomplete="current-password" placeholder="••••••••"/></div>
+      <button class="button dual-primary" type="submit" disabled aria-disabled="true">Zaloguj się</button>
+    </form>
+    <p class="login-note">Przycisk jest celowo nieaktywny, dopóki strona nie zostanie podłączona do systemu logowania.</p>
+  </section>
+</main>
+
+<script data-pretty-url-cleaner>
+(function(){
+  var path = window.location.pathname;
+  if (!path) return;
+  var target = null;
+  if (path.endsWith('/index.html')) {
+    target = path.slice(0, -10) || '/';
+  } else if (path.endsWith('.html') && path !== '/404.html') {
+    target = path.slice(0, -5) + '/';
+  }
+  if (target && target !== path) {
+    var qs = window.location.search || '';
+    var hash = window.location.hash || '';
+    window.history.replaceState({}, '', target + qs + hash);
+  }
+})();
+</script>
+
+</body>
+</html>
