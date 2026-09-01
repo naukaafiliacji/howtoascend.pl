@@ -45,8 +45,8 @@ Pliki odpowiedzialne za tę funkcję:
 - assets/js/main.js — obiekt `modes` oraz funkcja `applyMode()`.
 
 Zdjęcia wariantów:
-- assets/images/dropshipping-hero.webp
-- assets/images/customer-service-hero.webp
+- assets/images/hero-dropshipping-packages-2026.webp
+- assets/images/hero-customer-support-red-2026.webp
 
 Logowanie:
 - login.html jest obecnie tylko przygotowaną wizualnie stroną logowania.
