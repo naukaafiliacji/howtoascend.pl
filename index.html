@@ -18,12 +18,12 @@
     <nav class="dual-nav-links" aria-label="Główna nawigacja">
       <a href="#uslugi">Usługi</a>
       <a href="#jak-dzialamy">Jak działamy</a>
-      <a href="approach/">O nas</a>
-      <a href="blog/">Blog</a>
-      <a href="contact/">Kontakt</a>
+      <a href="approach.html">O nas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
     </nav>
 
-    <a class="login-button" href="login/">Logowanie</a>
+    <a class="login-button" href="login.html">Logowanie</a>
 
     <button class="dual-menu-toggle" type="button" aria-expanded="false" aria-label="Otwórz menu">
       <span></span><span></span>
@@ -34,10 +34,10 @@
     <div class="container">
       <a href="#uslugi">Usługi</a>
       <a href="#jak-dzialamy">Jak działamy</a>
-      <a href="approach/">O nas</a>
-      <a href="blog/">Blog</a>
-      <a href="contact/">Kontakt</a>
-      <a class="login-button" href="login/">Logowanie</a>
+      <a href="approach.html">O nas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Kontakt</a>
+      <a class="login-button" href="login.html">Logowanie</a>
     </div>
   </div>
 </header>
@@ -58,7 +58,7 @@
         </ul>
 
         <div class="dual-hero-actions">
-          <a class="button dual-primary" href="contact/">Porozmawiajmy o współpracy <span>→</span></a>
+          <a class="button dual-primary" href="contact.html">Porozmawiajmy o współpracy <span>→</span></a>
           <a class="dual-text-link" href="#jak-dzialamy">Zobacz jak działamy <span>›</span></a>
         </div>
       </div>
@@ -122,7 +122,7 @@
         <p class="dual-kicker" data-mode-text="why-kicker">Dlaczego łączymy te dwa obszary</p>
         <h2 data-mode-text="why-title">Dobra obsługa klienta w dropshippingu nie może być oderwana od tego, jak działa sklep.</h2>
         <p data-mode-text="why-text">Pytanie klienta często zaczyna się od produktu, ale kończy na zamówieniu, dostawie, zwrocie albo ponownym zakupie. Dlatego patrzymy na customer support jako część operacji e-commerce, a nie osobny dział odpisujący na wiadomości.</p>
-        <a class="dual-text-link" href="approach/">Poznaj nasz sposób pracy <span>›</span></a>
+        <a class="dual-text-link" href="approach.html">Poznaj nasz sposób pracy <span>›</span></a>
       </div>
     </div>
   </section>
@@ -157,7 +157,7 @@
         <p class="dual-kicker" data-mode-text="cta-kicker">Dropshipping</p>
         <h2 data-mode-text="cta-title">Porozmawiajmy o tym, co możemy przejąć w Twoim sklepie.</h2>
       </div>
-      <a class="button dual-primary" href="contact/">Kontakt <span>→</span></a>
+      <a class="button dual-primary" href="contact.html">Kontakt <span>→</span></a>
     </div>
   </section>
 </main>
@@ -171,11 +171,11 @@
       </div>
       <div class="footer-links">
         <a href="#uslugi">Usługi</a>
-        <a href="approach/">O nas</a>
-        <a href="blog/">Blog</a>
-        <a href="contact/">Kontakt</a>
-        <a href="privacy/">Prywatność</a>
-        <a href="terms/">Warunki</a>
+        <a href="approach.html">O nas</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Kontakt</a>
+        <a href="privacy.html">Prywatność</a>
+        <a href="terms.html">Warunki</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -186,24 +186,5 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
-
-<script data-pretty-url-cleaner>
-(function(){
-  var path = window.location.pathname;
-  if (!path) return;
-  var target = null;
-  if (path.endsWith('/index.html')) {
-    target = path.slice(0, -10) || '/';
-  } else if (path.endsWith('.html') && path !== '/404.html') {
-    target = path.slice(0, -5) + '/';
-  }
-  if (target && target !== path) {
-    var qs = window.location.search || '';
-    var hash = window.location.hash || '';
-    window.history.replaceState({}, '', target + qs + hash);
-  }
-})();
-</script>
-
 </body>
 </html>
